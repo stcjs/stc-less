@@ -15,6 +15,6 @@ var less2css = require('stc-less');
 
 //less to css
 stc.transpile({
-  less2css: {plugin: less2css, include: /\.less/}
+  less2css: {plugin: less2css, include: /\.less$/}
 })
 ```
