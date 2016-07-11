@@ -2,6 +2,7 @@ import Plugin from 'stc-plugin';
 import {extend} from 'stc-helper';
 
 let less = null;
+let options = null;
 /**
  * Use ESlint to verify code
  */
@@ -12,6 +13,9 @@ export default class Less2CssPlugin extends Plugin {
   async run(){
     if(!less){
       less = require('less');
+    }
+    if(!options){
+      options = extend(options, this.options);
     }
     let content = await this.getContent('utf8');
     let output;
@@ -33,6 +37,7 @@ export default class Less2CssPlugin extends Plugin {
     if(err){
       return this.fatal(err.message);
     }
+    this.file.extname = this.options.extname || 'css';
     this.setContent(data.output);
   }
   /**
