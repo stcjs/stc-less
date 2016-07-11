@@ -52,4 +52,10 @@ export default class Less2CssPlugin extends Plugin {
   static cache(){
     return false;
   }
+  /**
+   * set default include file
+   */
+   static include() {
+     return /\.less/;
+   }
 }
