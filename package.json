@@ -1,7 +1,7 @@
 {
   "name": "stc-less",
   "description": "convert less to css for stc",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": {
     "name": "lushijie",
     "email": "lushijie1218@126.com"
